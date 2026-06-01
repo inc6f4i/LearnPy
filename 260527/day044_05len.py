@@ -12,3 +12,4 @@ print(len(setData)) # 이 라인의 len()함수는 setData의 길이를 구하�
 
 dictData = {1:True, 2:False}
 print(len(dictData)) # 이 라인의 len()함수는 dictData의 길이를 구하는 함수임 즉 이 라인의 print()함수는 len()함수의 결과를
+    

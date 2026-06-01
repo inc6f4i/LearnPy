@@ -1,0 +1,10 @@
+x = int(input("x: "))
+y = int(input("y: "))
+if x < y :
+    print('x가 y보다 작습니다')
+elif x == y:
+    print('x와 y는 같습니다')
+#elif x>y:
+#    print('x가 y보다 큽니다')
+else :
+    print('x가 y보다 작지 않습니다')
