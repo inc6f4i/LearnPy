@@ -1,0 +1,8 @@
+ret = round(42.195)
+print(ret)
+ret = round(42.195, 0)
+print(ret)
+ret = round(42.195, 1)
+print(ret)
+ret = round(42.195, -1)
+print(ret)
