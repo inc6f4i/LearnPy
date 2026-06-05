@@ -1,4 +1,4 @@
-# 셀 012-1
+#012-1
 listData = ['a', 'b', 'c']
 inputData1 = input('알파벳을 입력하세요:')
 if inputData1 in listData: # in 연산자의 해석: listData라는 리스트의 요소 중에 'a' 라는 문자가 
