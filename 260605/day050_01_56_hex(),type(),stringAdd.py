@@ -5,5 +5,5 @@ print(type(h1)) #문자열리턴확인
 h2 = hex(98)
 print(h2)
 
-#032-2
+#032-26 문자열만 더해짐
 print(h1+h2)
