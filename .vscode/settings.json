@@ -1,38 +1,47 @@
-{
-  "editor.fontSize": 19,
-  "editor.fontWeight": 1000,
-  "code-runner.saveFileBeforeRun": true,
-  "code-runner.runInTerminal": true,
-  "python.linting.enabled": false,
-  "python.pythonPath": "C:\\Program Files\\Python\\Python314",
-  "window.zoomLevel": 0,
-  "terminal.integrated.fontSize": 19,
-  "code-runner.clearPreviousOutput": true,
-  "explorer.confirmDelete": false,
-  "explorer.incrementalNaming": "smart",
-  "files.autoSave": "afterDelay",
-  "command": "workbench.action.terminal.clear",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Visual Studio Light",
-  "jupyter.alwaysTrustNotebooks": true,
-  "jupyter.askForKernelRestart": false,
-  "liveServer.settings.donotShowInfoMsg": true,
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook",
-    "*.avi": "default"
-  },
-  "python.showStartPage": false,
-  "python.languageServer": "Pylance",
-  "notebook.cellToolbarLocation": {
+{    
+"editor.fontSize": 19,    //편집기 폰트사이즈
+"editor.fontWeight": 1000, //폰트두께
+"editor.minimap.enabled": false, //미리보기멋있어보이는거
+"editor.fontFamily": "D2 Coding ligature, D2Coding, Consolas, 'Courier New', monospace", // 개발전용폰트
+"editor.mouseWheelZoom": true, //마우스줌가능
+"editor.fontLigatures": true, //합자로만들기 == 
+
+"terminal.integrated.fontSize": 19,    //터미널 폰트사이즈
+"terminal.integrated.scrollback": 1000, //터미널 최대 1000줄
+
+"code-runner.saveFileBeforeRun": true,//저장
+"code-runner.runInTerminal": true, //터미널에서실행(학습의핵심)
+"code-runner.clearPreviousOutput": true,    //이전결과물클리어
+
+"python.languageServer": "Pylance",
+"python.linting.enabled": false, //틀린줄표시(중복되서끊듯
+//"python.pythonPath":
+//"python.defaultInterpreterPath": ""
+"python.showStartPage": false,
+
+"jupyter.alwaysTrustNotebooks": true,//주피터 노트북설
+"jupyter.askForKernelRestart": false,
+"notebook.cellToolbarLocation": {    //주피터
     "default": "right",
     "jupyter-notebook": "left"
-  },
-  "python.defaultInterpreterPath": "C:\\Program Files\\Python\\Python314",
-  "editor.minimap.enabled": false,
-  "terminal.integrated.scrollback": 1000,
-  "editor.fontFamily": "D2 Coding ligature, D2Coding, Consolas, 'Courier New', monospace",
-  "editor.fontLigatures": true,
-  "editor.mouseWheelZoom": true,
-  "notebook.lineNumbers": "on",
-  "workbench.editor.empty.hint": "hidden"
+
+},
+"notebook.lineNumbers": "on", //주피터 셀마다 줄표시
+
+"explorer.incrementalNaming": "smart",    //파일생성시 오토넘버링
+"explorer.confirmDelete": false,    //탐색기에서 삭제에대한 확인여부 묻지않음
+"files.autoSave": "afterDelay",
+
+"window.zoomLevel": 0, //확대축소 배율기본고정
+"workbench.colorTheme": "Visual Studio Light",
+"workbench.startupEditor": "newUntitledFile",//welcome페이지 없이시작
+"workbench.editorAssociations": {    //해당확장자의 실행기지정
+    "*.ipynb": "jupyter-notebook",
+    "*.avi": "default"
+    },
+"workbench.editor.empty.hint": "hidden",//빈화면일때힌트 제거함
+
+//"key"    :  "ctrl+m"
+//"command": "workbench.action.terminal.clear",//콘솔클리어
+//"liveServer.settings.donotShowInfoMsg": true,//서버포트안내
 }
