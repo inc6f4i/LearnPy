@@ -1,9 +1,16 @@
+#####################################################
+###         엣지 디텍션 비교하기 서브플롯으로 결과
+#####################################################
+
+
+# https://robot-python-4.netlify.app/75 Edge Detection 방법 비교
+#
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
+
 path = 'C:/Users/user/Desktop/imaging/260707/'
 img = cv2.imread(path +'/dave.png')
-
 # Canny Edge Detection
 canny = cv2.Canny(img, 30, 70) # threshold1=30, threshold2=70
 

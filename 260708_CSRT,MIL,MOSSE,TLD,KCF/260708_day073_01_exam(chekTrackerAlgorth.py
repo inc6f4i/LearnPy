@@ -1,3 +1,8 @@
+#####################################################
+###         트래커가 적용된 코드 체험
+#####################################################
+
+
 # Tracker APIs 수정판
 # track_trackingAPI_fixed.py
 
@@ -25,8 +30,8 @@ tracker = None
 bbox = None
 isFirst = True
 
-video_src = r'C:\Users\user\Desktop\imaging\260707\highway.mp4'
-
+video_src = r'C:\Users\user\Desktop\objdecsrc\2026-07-07 highway.mp4'
+video_src = 0
 cap = cv2.VideoCapture(video_src)
 
 if not cap.isOpened():
@@ -122,7 +127,7 @@ while cap.isOpened():
     else:
         ok, bbox = tracker.update(frame)
 
-        x, y, w, h = bbox
+        x, y, w, h = map(int, bbox)#################정수형으로 
 
         if ok:
             cv2.rectangle(
@@ -165,7 +170,7 @@ while cap.isOpened():
     # 스페이스바 또는 비디오 파일 최초 실행 시 ROI 선택
     if key == ord(" ") or (video_src != 0 and isFirst):
         isFirst = False
-
+ 
         roi = cv2.selectROI(win_name, frame, False)
 
         if roi[2] and roi[3]:
@@ -173,16 +178,21 @@ while cap.isOpened():
             bbox = roi
             isInit = tracker.init(frame, roi)
 
-            if not isInit:
+            if not isInit: 
                 print("Tracker initialization failed")
 
     # 숫자키 0 ~ 트래커 개수-1
-    elif 48 <= key < 48 + len(TRACKER_NAMES):
+    elif 48 <= key < 48 + len(TRACKER_NAMES): 
+
+
+
         trackerIdx = key - 48
 
         if bbox is not None:
+            x, y , w, h = map(int, bbox)
+            int_bbox = (x, y, w, h)
             tracker = create_tracker(TRACKER_NAMES[trackerIdx])
-            isInit = tracker.init(frame, bbox)
+            isInit = tracker.init(frame, int_bbox)
 
             if not isInit:
                 print("Tracker re-initialization failed")
